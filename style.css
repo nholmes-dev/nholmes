@@ -113,3 +113,15 @@ footer p {
     color: #64748b; /* Muted gray text */
     margin: 0;
 }
+/* Smooth Navigation Links */
+nav a {
+    color: #38bdf8; /* Sleek sky blue for links */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: #60a5fa; /* Changes to a lighter blue on hover */
+    text-underline-offset: 4px;
+    text-decoration: underline;
+}
