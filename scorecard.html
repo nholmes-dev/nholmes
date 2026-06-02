@@ -43,30 +43,15 @@
             margin: 5px 0;
         }
 
-        /* Mobile-friendly frame count rows */
+        /* Automated clean frame display row */
         .frame-counter {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
             margin-top: 8px;
             color: #94a3b8;
             font-size: 1.1rem;
         }
-        .frame-btn {
-            background-color: #334155;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            width: 28px;
-            height: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .frame-btn:active { transform: scale(0.9); }
 
         .break-tracker {
             text-align: center;
@@ -107,7 +92,18 @@
         .blue { background-color: #2563eb; }
         .pink { background-color: #db2777; }
         .black { background-color: #000; border: 1px solid #334155; }
-        .foul { background-color: #475569; }
+        
+        /* Inline split foul group setup */
+        .foul-group {
+            display: flex;
+            gap: 10px;
+        }
+        .foul-group .ball-btn {
+            flex: 1;
+            padding: 12px 0;
+            text-align: center;
+            background-color: #475569;
+        }
         
         .action-container {
             display: flex;
@@ -140,11 +136,9 @@
                     <input type="text" id="p1-name" class="player-name-input" value="Player 1" oninput="syncActionLabels()">
                     <div class="player-score" id="p1-display">0</div>
                     
-                    <!-- Frame Counter UI (Kept manual +/- buttons as an option/override) -->
+                    <!-- Clean Auto Frame Display -->
                     <div class="frame-counter">
-                        <button class="frame-btn" onclick="adjustFrames(1, -1)">-</button>
                         <span>Frames: <strong id="p1-frames" style="color: white;">0</strong></span>
-                        <button class="frame-btn" onclick="adjustFrames(1, 1)">+</button>
                     </div>
                 </div>
                 <div>
@@ -152,11 +146,9 @@
                     <input type="text" id="p2-name" class="player-name-input" value="Player 2" oninput="syncActionLabels()">
                     <div class="player-score" id="p2-display">0</div>
                     
-                    <!-- Frame Counter UI (Kept manual +/- buttons as an option/override) -->
+                    <!-- Clean Auto Frame Display -->
                     <div class="frame-counter">
-                        <button class="frame-btn" onclick="adjustFrames(2, -1)">-</button>
                         <span>Frames: <strong id="p2-frames" style="color: white;">0</strong></span>
-                        <button class="frame-btn" onclick="adjustFrames(2, 1)">+</button>
                     </div>
                 </div>
             </div>
@@ -178,7 +170,14 @@
                     <button class="ball-btn blue" onclick="addScore(1, 5)">Blue (5)</button>
                     <button class="ball-btn pink" onclick="addScore(1, 6)">Pink (6)</button>
                     <button class="ball-btn black" onclick="addScore(1, 7)">Black (7)</button>
-                    <button class="ball-btn foul" onclick="foul(1)">Foul (Opponent +4)</button>
+                    
+                    <!-- Variable Foul Row -->
+                    <div class="foul-group">
+                        <button class="ball-btn" onclick="foul(1, 4)">4</button>
+                        <button class="ball-btn" onclick="foul(1, 5)">5</button>
+                        <button class="ball-btn" onclick="foul(1, 6)">6</button>
+                        <button class="ball-btn" onclick="foul(1, 7)">7</button>
+                    </div>
                 </div>
 
                 <!-- Player 2 Column -->
@@ -191,7 +190,14 @@
                     <button class="ball-btn blue" onclick="addScore(2, 5)">Blue (5)</button>
                     <button class="ball-btn pink" onclick="addScore(2, 6)">Pink (6)</button>
                     <button class="ball-btn black" onclick="addScore(2, 7)">Black (7)</button>
-                    <button class="ball-btn foul" onclick="foul(2)">Foul (Opponent +4)</button>
+                    
+                    <!-- Variable Foul Row -->
+                    <div class="foul-group">
+                        <button class="ball-btn" onclick="foul(2, 4)">4</button>
+                        <button class="ball-btn" onclick="foul(2, 5)">5</button>
+                        <button class="ball-btn" onclick="foul(2, 6)">6</button>
+                        <button class="ball-btn" onclick="foul(2, 7)">7</button>
+                    </div>
                 </div>
             </div>
 
@@ -238,21 +244,22 @@
             document.getElementById('current-break').innerText = currentBreak;
         }
 
-        function foul(foulingPlayer) {
+        // Updated dynamically targeted foul function
+        function foul(foulingPlayer, penaltyPoints) {
             currentBreak = 0;
             document.getElementById('current-break').innerText = currentBreak;
             lastPlayer = 0;
 
             if (foulingPlayer === 1) {
-                p2Score += 4;
+                p2Score += penaltyPoints;
                 document.getElementById('p2-display').innerText = p2Score;
             } else {
-                p1Score += 4;
+                p1Score += penaltyPoints;
                 document.getElementById('p1-display').innerText = p1Score;
             }
         }
 
-        // Frame Increment/Decrement Logic
+        // Frame update backend engine
         function adjustFrames(player, val) {
             if (player === 1) {
                 p1Frames = Math.max(0, p1Frames + val);
@@ -268,7 +275,6 @@
             const name1 = document.getElementById('p1-name').value.trim() || "Player 1";
             const name2 = document.getElementById('p2-name').value.trim() || "Player 2";
 
-            // Edge check: Don't do anything if no points have been scored
             if (p1Score === 0 && p2Score === 0) {
                 alert("No scores have been recorded for this frame yet.");
                 return;
@@ -288,12 +294,9 @@
                 return;
             }
 
-            // Quick native confirmation layout to protect accidental click telemetry loss
             if (confirm(`End this frame and automatically award it to ${winnerName}?`)) {
-                // Tick up the frame tracker
                 adjustFrames(winningPlayerNumber, 1);
                 
-                // Reset frame scores down to zero
                 p1Score = 0;
                 p2Score = 0;
                 currentBreak = 0;
