@@ -1,0 +1,24 @@
+{
+  "short_name": "NH Scorecard",
+  "name": "NH Snooker Scorecard",
+  "description": "A mobile-optimized standalone tracking engine for snooker match scoring and break telemetry.",
+  "icons": [
+    {
+      "src": "/images/snooker small logo.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/snooker big logo.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#0a3c24",
+  "theme_color": "#0a3c24",
+  "display": "standalone",
+  "orientation": "portrait"
+}
