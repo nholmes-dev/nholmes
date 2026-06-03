@@ -8,10 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
             <a href="contact.html">Contact</a>
         </nav>
     `;
-    
     // Inject the navigation into the <header> element of the page
     const headerElement = document.querySelector('header');
     if (headerElement) {
         headerElement.innerHTML = navHTML;
     }
-});
+}); 
