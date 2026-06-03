@@ -3,7 +3,7 @@ const headerTemplate = `
   <header class="site-header">
     <div class="header-logo">
       <a href="/">
-        <img src="logo.png" alt="NH Logo" id="main-logo">
+        <img src="images/logo.png" alt="NH Logo" id="main-logo">
       </a>
     </div>
     <nav class="header-nav">
