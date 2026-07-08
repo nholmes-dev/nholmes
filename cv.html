@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NH | CV</title>
+    <title>Nathan Holmes | CV — DevOps &amp; Cloud Engineer</title>
+    <meta name="description" content="CV of Nathan Holmes — Technical Consultant and Cloud Operations Engineer with 9+ years experience in Azure, Kubernetes, CI/CD, and UK Public Sector SaaS delivery.">
+    <meta property="og:title" content="Nathan Holmes | CV — DevOps & Cloud Engineer">
+    <meta property="og:description" content="CV of Nathan Holmes — Technical Consultant and Cloud Operations Engineer with 9+ years experience in Azure, Kubernetes, CI/CD, and UK Public Sector SaaS delivery.">
+    <meta property="og:url" content="https://nathanholmes.uk/cv.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://nathanholmes.uk/images/og-image.png">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+    <style>
+        @media print {
+            .no-print { display: none; }
+            body { background: white; color: black; }
+            a { color: black; }
+        }
+        .cv-download-btn {
+            display: inline-block;
+            background-color: #0284c7;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .cv-download-btn:hover { background-color: #0369a1; }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -18,6 +45,7 @@
 
         <!-- Main CV Content -->
         <main>
+            <button class="cv-download-btn no-print" onclick="window.print()">Download CV as PDF &darr;</button>
             <header>
                 <h1>Nathan Holmes</h1>
                 <p>
