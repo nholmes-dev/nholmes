@@ -56,57 +56,55 @@
             <h1>Engineering Projects</h1>
             <p>Below is a curated log of automated tools, technical infrastructure deployments, and functional applications developed by myself to solve real-world problems that I have discovered in life. Here you will find a collection of my recent work and contributions.</p>
 
-            <!-- Project Card 1: Snooker Scoreboard -->
+            <!-- Project Card 1: BaizeBoard -->
             <div class="project-card">
-                <h2>Free Online Digital Snooker Scoreboard</h2>
-                
+                <h2>BaizeBoard</h2>
+
                 <div class="project-meta">
-                    <code>JavaScript</code>
-                    <code>CSS3</code>
-                    <code>HTML5</code>
-                    <code>Mobile-First UX</code>
+                    <code>React</code>
+                    <code>Vite</code>
+                    <code>Supabase</code>
+                    <code>Stripe</code>
+                    <code>Cloudflare Pages</code>
                     <code>Progressive Web App</code>
                 </div>
 
-                <p>An interactive, mobile-responsive telemetry tool engineered to track frame scores, consecutive break accumulations, and foul penalties straight from the table edge. Built entirely serverless to eliminate infrastructure overhead and ensure instantaneous response times on remote networks.</p>
-                <p>I regularly play snooker and developed this tool to enhance my gameplay experience and provide a more engaging way to track matches. I may expand it in the future to include additional features and a backend cloud database.</p>
-                <p>If you're using a mobile device, you can add this tool to your home screen and use it offline.</p>
-                <p><strong>Core Architecture Highlights:</strong> Implements real-time dynamic state-tracking algorithms to compute continuous frame runs, turn switching context, and opposite-player penalty routing upon foul calculation.</p>
-                
+                <p>A full-stack snooker scoring platform built for clubs and casual players alike. BaizeBoard handles real-time frame scoring, break tracking, foul penalties, and full match statistics — all from the table edge on any device.</p>
+                <p>What started as a personal tool to improve my own match nights evolved into a platform with club management, user authentication, tiered Pro subscriptions via Stripe, and an offline-capable PWA for remote venues. Clubs can register, manage members, and run scored matches with persistent history stored in a Postgres database via Supabase.</p>
+                <p><strong>Core Architecture Highlights:</strong> React SPA with Supabase auth and row-level security, real-time state management for scoring logic, Stripe billing for Pro tier access, and Cloudflare Pages for edge deployment with zero cold starts.</p>
+
                 <a href="https://baizeboard.com" class="project-btn" target="_blank" rel="noopener noreferrer">Launch Application &rarr;</a> <a href="https://github.com/nholmes-dev/baizeboard" class="project-btn" target="_blank" rel="noopener noreferrer">GitHub Repo &rarr;</a>
             </div>
 
-                        <!-- Project Card 2: Car garage website -->
+            <!-- Project Card 2: Car garage website -->
             <div class="project-card">
-                <h2>Preston Autocare LTD - Website</h2>
+                <h2>Preston Autocare LTD — Website</h2>
                 <div class="project-meta">
-                    <code>GitHub Actions</code>
-                    <code>Cloudflare DNS</code>
-                    <code>CI/CD</code>
                     <code>HTML5</code>
-                    <code>CSS3 Grid</code>
+                    <code>CSS3</code>
+                    <code>Cloudflare DNS</code>
+                    <code>GitHub Actions</code>
+                    <code>CI/CD</code>
                 </div>
-                <p>A website built for a friends business </p>
-                <p>My friend had an outdated website which was built and hosted in 2017 by the company IONOS. I recently discovered that he was spending £180 yearly for the hosting package and that the website was in fact very outdated and not very informative or user friendly. I built this website including the logo design to improve the visuals and attract more vistors to his business, which included saving him the hosting cost from the previous service provider! </p>
-               
-                <a href="https://prestonautocareltd.pages.dev" class="project-btn">Launch Website &rarr;</a> <a href="https://github.com/nholmes-dev/prestonautocare" class="project-btn" target="_blank" rel="noopener noreferrer">GitHub Repo &rarr;</a>
+                <p>A modern website designed and built for a local car garage business, replacing an outdated 2017 site that was costing the owner £180 per year in hosting fees.</p>
+                <p>I redesigned the site from scratch — including a new logo — to improve visual quality, usability, and search visibility. The new site is deployed via Cloudflare Pages at no hosting cost, saving the business money while delivering a significantly better user experience for customers.</p>
+
+                <a href="https://prestonautocareltd.pages.dev" class="project-btn" target="_blank" rel="noopener noreferrer">Launch Website &rarr;</a> <a href="https://github.com/nholmes-dev/prestonautocare" class="project-btn" target="_blank" rel="noopener noreferrer">GitHub Repo &rarr;</a>
             </div>
-            
-            <!-- Project Card 3: Rugby Timer -->
-            <div class="project-card" style="border-style: dashed; opacity: 0.6;">
-                <h2>Rugby Drill Timer</h2>
+
+            <!-- Project Card 3: Off Streets On Sports -->
+            <div class="project-card">
+                <h2>Off Streets On Sports — Custom Kit Builder</h2>
                 <div class="project-meta">
-                    <code>GitHub Actions</code>
-                    <code>Cloudflare DNS</code>
-                    <code>CI/CD</code>
                     <code>HTML5</code>
-                    <code>CSS3 Grid</code>
+                    <code>CSS3</code>
                     <code>JavaScript</code>
+                    <code>Cloudflare Pages</code>
                 </div>
-                <p>An interactive timer designed for rugby training sessions, allowing coaches to manage drill durations and intervals with precision. Built with a focus on usability and performance to ensure seamless integration into existing training workflows.</p>
-                <p>I built this tool to streamline my coaching process and provide a more structured approach to managing training exercises. We were previously using a manual system, which was time-consuming and error-prone, so I developed this solution to improve efficiency and accuracy.</p>
-               
-                <a href="rugby-timer.html" class="project-btn">Coming Soon &rarr;</a>
+                <p>A custom sports kit design and ordering platform built for a sports apparel brand, allowing teams and individuals to configure and order personalised kits online.</p>
+                <p>The site provides an intuitive builder experience for customers to select styles, colours, and personalisation options, streamlining what was previously a manual back-and-forth ordering process into a clean self-service flow.</p>
+
+                <a href="https://offstreetsonsports.com" class="project-btn" target="_blank" rel="noopener noreferrer">Launch Website &rarr;</a>
             </div>
         </main>
 
