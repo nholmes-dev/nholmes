@@ -13,8 +13,12 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <style>
+        @page {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
         @media print {
-            .no-print, .container > header, footer, hr { display: none; }
+            .no-print, .container > header, footer, hr { display: none !important; }
             body { background: white; color: black; }
             a { color: black; }
         }
