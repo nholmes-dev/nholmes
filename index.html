@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathan Holmes | DevOps &amp; Cloud Engineer</title>
-    <meta name="description" content="Portfolio of Nathan Holmes — DevOps and Cloud Operations Engineer specialising in Azure, Kubernetes, CI/CD, and cloud-native infrastructure.">
-    <meta property="og:title" content="Nathan Holmes | DevOps & Cloud Engineer">
-    <meta property="og:description" content="Portfolio of Nathan Holmes — DevOps and Cloud Operations Engineer specialising in Azure, Kubernetes, CI/CD, and cloud-native infrastructure.">
+    <title>Nathan Holmes | Personal Projects, DevOps &amp; Cloud Portfolio</title>
+    <meta name="description" content="Personal projects and a hands-on DevOps portfolio by Nathan Holmes, exploring web applications, cloud deployments, GitHub workflows and Cloudflare Pages.">
+    <meta property="og:title" content="Nathan Holmes | Personal Projects, DevOps & Cloud Portfolio">
+    <meta property="og:description" content="Personal projects and practical DevOps experiments — web applications, cloud hosting and deployment workflows.">
     <meta property="og:url" content="https://nathanholmes.uk/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://nathanholmes.uk/images/og-image.png">
@@ -23,44 +23,48 @@
 
         <main>
             <h1>Nathan Holmes</h1>
-            <h2>DevOps & Cloud Engineering Portfolio</h2>
+            <p class="eyebrow">Personal Projects &middot; DevOps &middot; Cloud Engineering</p>
+            <h2 class="hero-title">Building things, experimenting with technology, and learning as I go.</h2>
+            <p class="intro">Welcome to my personal corner of the internet. This site is where I share what I build outside work &mdash; from useful web applications and websites to cloud hosting experiments and DevOps workflows. It is a place to try new ideas, solve interesting problems, and document what I've learned along the way.</p>
+            <p>My professional background is in technical consultancy, software delivery and Azure, but this portfolio is primarily about my <strong>personal projects and technical interests</strong>. For my employment history, there's a separate <a href="/cv">CV page</a>.</p>
 
-            <h3>About Me</h3>
-            <p>I am a Technical Consultant and Cloud Operations Engineer specialising in bridging the gap between legacy environments and modern, cloud-native enterprise operations. My background includes extensive experience managing high-compliance application lifecycles, executing complex cloud migrations, and maintaining operational reliability across large-scale SaaS delivery platforms.</p>
-            <p>Currently, I am expanding my technical depth into systems automation, infrastructure-as-code, and advanced CI/CD engineering. I thrive on solving complex systems problems, optimising production rollbacks, and building engineering workflows that ensure zero-downtime deployments. I hold active NPPV Level 3 and Security Check (SC) clearances, gained through years of supporting UK public sector and law enforcement environments.</p>
-           
-            <h3>Core Technical Focus</h3>
-            <ul>
-                <li><strong>Cloud & Infrastructure:</strong> Azure (IaaS/PaaS), AKS, Azure SQL, Azure Monitor, Data Factory, AzCopy</li>
-                <li><strong>DevOps & GitOps:</strong> ArgoCD, Pulumi, Helm, GitHub Actions, CI/CD pipelines, YAML</li>
-                <li><strong>Networking & Security:</strong> TCP/IP, Firewalls, Proxies, Zero Trust, Azure PIM, MFA</li>
-                <li><strong>Observability:</strong> Grafana, Azure Monitor, container log analysis, RCA</li>
-                <li><strong>Development:</strong> HTML, CSS, JavaScript, React, Python</li>
-            </ul>
+            <h2>Projects I'm Working On</h2>
+            <div class="focus-grid">
+                <section class="focus-card">
+                    <h3>BaizeBoard</h3>
+                    <p>A snooker scoring and club-management app that grew out of something I wanted for my own match nights. Built around React, Supabase and Cloudflare Pages.</p>
+                    <p><a href="https://baizeboard.com" target="_blank" rel="noopener noreferrer">Explore BaizeBoard &rarr;</a></p>
+                </section>
+                <section class="focus-card">
+                    <h3>Websites &amp; Practical Tools</h3>
+                    <p>Web projects for real people and organisations, including Preston Autocare and Off Streets On Sports. A chance to practise development, hosting and delivery.</p>
+                    <p><a href="/projects">See website projects &rarr;</a></p>
+                </section>
+                <section class="focus-card">
+                    <h3>Ralphie Studios</h3>
+                    <p>My independent game-development project, including a work-in-progress Wheelchair Rugby League game inspired by a sport I play.</p>
+                    <p><a href="https://ralphiestudios.com" target="_blank" rel="noopener noreferrer">Visit Ralphie Studios &rarr;</a></p>
+                </section>
+            </div>
+            <p><a href="/projects">Browse all projects &rarr;</a></p>
 
-            <p>
-                <a href="https://github.com/nholmes-dev" target="_blank" rel="noopener noreferrer" style="margin-right: 15px;">GitHub &rarr;</a>
-                <a href="https://www.linkedin.com/in/nathan-holmes-in/" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
-            </p>
-
-           <!-- Expanded Engineering Showcase Section -->
             <section id="architecture">
-                <h2>Architecture: How & Why I Built This Site</h2>
-                
-                <h3>Strategic Intent</h3>
-                <p>This portfolio is deliberately designed not just as a static CV, but as a living engineering laboratory. The objective of this project is to gain hands-on mastery over production-grade GitOps workflows, automated release pipelines, and edge network delivery. By treating personal infrastructure with the same rigorous compliance and automation standards required in enterprise cloud operations, it serves as a practical testing ground for my ongoing systems engineering studies.</p>
-                
-                <h3>The CI/CD Pipeline & Infrastructure Architecture</h3>
-            <ul>
-                <li><strong>Immutable Version Control:</strong> Managed completely via <code>GitHub</code> using a branch-protection and feature-isolation workflow. Code changes, layout enhancements, and configuration updates are strictly tested on isolated preview branches before being integrated into production, mirroring enterprise release gates.</li>
-                <li><strong>Event-Driven Automation:</strong> Fully integrated with <code>Cloudflare Pages</code> using secure webhook notifications. Pushing verified code to the repository automatically triggers an isolated, short-lived build container that autonomously compiles, validates, and provisions the static application assets.</li>
-                <li><strong>Edge Network Delivery & Security:</strong> DNS zone management and traffic routing are fully optimized through <code>Cloudflare</code>'s global edge network. The platform utilizes automated edge <code>SSL/TLS</code> encryption, automated cache management, and localized low-latency routing to serve the application globally under the custom domains <code>nathanholmes.uk</code> and <code>www.nathanholmes.uk</code>.</li>
-            </ul>
+                <h2>How &amp; Why I Built This Site</h2>
+                <p>This portfolio is a project in its own right. I created it as a practical way to learn and experiment with <strong>version control, automated deployment, hosting and cloud infrastructure</strong>, rather than just write about those technologies on a CV.</p>
+                <h3>The Deployment Workflow</h3>
+                <ul>
+                    <li><strong>GitHub:</strong> Stores the source code and tracks changes. I can work on a separate branch and review changes before updating the live site.</li>
+                    <li><strong>Cloudflare Pages:</strong> Builds and deploys the website from GitHub, including preview deployments for branches so I can test updates before publishing.</li>
+                    <li><strong>Cloudflare DNS &amp; HTTPS:</strong> Serves the site on my own domain with secure connections and Cloudflare's edge network.</li>
+                    <li><strong>Continuous learning:</strong> I use this project to explore HTML, CSS, JavaScript and CI/CD concepts, and improve the site as I learn more.</li>
+                </ul>
+                <p>It's deliberately a working portfolio rather than a finished showcase &mdash; I like having somewhere I can try things, break them, fix them and keep learning.</p>
             </section>
+
         </main>
         <hr>
         <footer>
-            <p>&copy; 2026 Nathan Holmes. Built using semantic HTML and automated GitOps infrastructure.</p>
+            <p>&copy; 2026 Nathan Holmes. Built with GitHub and Cloudflare Pages.</p>
         </footer>
     </div>
     <script>
